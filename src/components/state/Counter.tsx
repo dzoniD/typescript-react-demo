@@ -4,10 +4,16 @@ type CounterState = {
     count: number
 }
 
-type CounterAction = {
-    type: 'increment' | 'decrement' | 'reset'
-    payload?: number
+type UpdateAction = {
+    type: 'increment' | 'decrement'
+    payload: number
 }
+
+type ResetAction = {
+    type: 'reset'
+}
+
+type CounterAction = UpdateAction | ResetAction
 
 const initialState = { count: 0 }
 
