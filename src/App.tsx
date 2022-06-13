@@ -13,6 +13,8 @@ import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
 import { UserContextProvider } from './components/context/UserContex';
 import { User } from './components/context/User';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
 
 function App() {
   const personName = {
@@ -39,9 +41,10 @@ function App() {
 
   return (
     <div className="App">
-      <UserContextProvider>
+      <Private isLoggedIn={true} component={Profile}/>
+      {/* <UserContextProvider>
         <User/>
-      </UserContextProvider>
+      </UserContextProvider> */}
       {/* <ThemeContextProvider>
         <Box/>
       </ThemeContextProvider> */}
