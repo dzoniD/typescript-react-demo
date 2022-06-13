@@ -16,6 +16,7 @@ import { User } from './components/context/User';
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
 import { List } from './components/generics/List';
+import { RandomNumber } from './components/restrictions/RandomNumber';
 
 function App() {
   const personName = {
@@ -42,9 +43,10 @@ function App() {
 
   return (
     <div className="App">
+      <RandomNumber value={10} isPositive  />
       {/* <List items={['Batman', 'Superman', 'Wonder Woman']} onClick={(item) => console.log(item)}/>
       <List items={[ 1, 2, 3 ]} onClick={(item) => console.log(item)}/> */}
-      <List 
+      {/* <List 
         items={[ 
           { 
             id:1,
@@ -63,7 +65,7 @@ function App() {
           },
           ]}
          onClick={(item) => console.log(item)}
-        />
+        /> */}
       {/* <Private isLoggedIn={true} component={Profile}/> */}
       {/* <UserContextProvider>
         <User/>
